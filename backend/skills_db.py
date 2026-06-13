@@ -1,0 +1,1 @@
+COMMON_SKILLS=['linux','aws','azure','docker','kubernetes','terraform','python','java','git','jenkins','networking','monitoring','incident management','prometheus','grafana','ansible','cloud','devops','sre','ci/cd']
