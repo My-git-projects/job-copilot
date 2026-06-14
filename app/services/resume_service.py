@@ -5,18 +5,32 @@ BASE_DIR = os.path.dirname(
     os.path.dirname(__file__)
 )
 
-DATA_FILE = os.path.join(
+DATA_DIR = os.path.join(
     BASE_DIR,
-    "data",
+    "data"
+)
+
+DATA_FILE = os.path.join(
+    DATA_DIR,
     "resumes.json"
 )
 
 
 def load_resumes():
 
+    os.makedirs(
+        DATA_DIR,
+        exist_ok=True
+    )
+
     if not os.path.exists(DATA_FILE):
 
-        with open(DATA_FILE, "w") as file:
+        with open(
+            DATA_FILE,
+            "w",
+            encoding="utf-8"
+        ) as file:
+
             json.dump([], file)
 
     with open(

@@ -34,5 +34,51 @@
             "sre",
             "ci/cd"
         ]
+    },
+    {
+        "resume_name": "test.pdf",
+        "skills": [
+            "aws"
+        ]
+    },
+    {
+        "resume_name": "test.pdf",
+        "skills": [
+            "aws"
+        ]
+    },
+    {
+        "resume_name": "test.pdf",
+        "skills": [
+            "aws"
+        ]
+    },
+    {
+        "resume_name": "test.pdf",
+        "skills": [
+            "aws"
+        ]
+    },
+    {
+        "resume_name": "test.pdf",
+        "skills": [
+            "aws"
+        ]
+    },
+    {
+        "resume_name": "test.pdf",
+        "skills": [
+            "aws"
+        ]
+    },
+    {
+        "resume_name": "dummy.pdf",
+        "skills": []
+    },
+    {
+        "resume_name": "test.pdf",
+        "skills": [
+            "aws"
+        ]
     }
 ]

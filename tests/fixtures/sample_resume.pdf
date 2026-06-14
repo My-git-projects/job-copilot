@@ -1,0 +1,24 @@
+from fastapi.testclient import TestClient
+from main import app
+
+client = TestClient(app)
+
+def test_real_pdf_upload():
+
+    with open(
+        "tests/fixtures/sample_resume.pdf",
+        "rb"
+    ) as pdf_file:
+
+        response = client.post(
+            "/upload-resume",
+            files={
+                "file": (
+                    "sample_resume.pdf",
+                    pdf_file,
+                    "application/pdf"
+                )
+            }
+        )
+
+    assert response.status_code == 200

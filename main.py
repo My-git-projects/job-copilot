@@ -3,6 +3,7 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi import UploadFile
 from fastapi import File
+from fastapi import HTTPException
 
 from pydantic import BaseModel
 
@@ -66,9 +67,18 @@ async def upload_resume(
 
         uploaded_file.write(contents)
 
-    pdf_text = extract_text_from_pdf(
-        file_path
-    )
+    try:
+
+        pdf_text = extract_text_from_pdf(
+            file_path
+        )
+
+    except Exception as e:
+
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid PDF: {str(e)}"
+        )
 
     skills = extract_skills(
         pdf_text
@@ -76,23 +86,15 @@ async def upload_resume(
 
     save_resume(
         {
-            "resume_name":
-                file.filename,
-
-            "skills":
-                skills
+            "resume_name": file.filename,
+            "skills": skills
         }
     )
 
     return {
-        "status":
-            "uploaded",
-
-        "filename":
-            file.filename,
-
-        "skills":
-            skills
+        "status": "uploaded",
+        "filename": file.filename,
+        "skills": skills
     }
 
 
