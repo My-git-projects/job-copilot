@@ -1,10 +1,7 @@
 fastapi
 uvicorn
-python-multipart
 pydantic
-
-sqlalchemy
-aiofiles
-pymupdf
-pytest
-httpx2
+sentence-transformers
+numpy
+faiss-cpu
+openai
