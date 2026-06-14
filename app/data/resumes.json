@@ -1,0 +1,38 @@
+[
+    {
+        "resume_name": "Resume_4exp_cind.pdf",
+        "skills": [
+            "linux",
+            "aws",
+            "docker",
+            "kubernetes",
+            "terraform",
+            "python",
+            "java",
+            "git",
+            "jenkins",
+            "monitoring",
+            "prometheus",
+            "grafana",
+            "cloud",
+            "devops",
+            "ci/cd"
+        ]
+    },
+    {
+        "resume_name": "resume-sre-hcltech-1.1.pdf",
+        "skills": [
+            "linux",
+            "aws",
+            "python",
+            "git",
+            "networking",
+            "monitoring",
+            "incident management",
+            "grafana",
+            "cloud",
+            "sre",
+            "ci/cd"
+        ]
+    }
+]

@@ -6,3 +6,5 @@ pydantic
 sqlalchemy
 aiofiles
 pymupdf
+pytest
+httpx2
